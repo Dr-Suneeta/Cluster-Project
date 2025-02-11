@@ -66,7 +66,7 @@ if uploaded_file is not None:
         st.bar_chart(pca.explained_variance_ratio_)   
         
         c=st.selectbox("Select the cluster group.",[i for i in range(k)])
-        st.write(WDMC[WDMC["Clusters"]==c]["Country"])
+        st.write(WDMC[WDMC["Clusters"]==c]["Country"].unique())
         
     else:
         st.warning("Please select at least two features for clustering.")
